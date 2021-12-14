@@ -1,0 +1,15 @@
+<div class="calc-history">
+  <div *ngIf="calculatorHistory?.length; else noData">
+    <div *ngFor="let history of calculatorHistory">
+      <ol>
+        <li>{{ history }}</li>
+      </ol>
+    </div>
+  </div>
+  <ng-template #noData>
+    {{ "Oops! No history." }}
+  </ng-template>
+  <div class="back-calc">
+      <a routerLink="">Back to Calculator</a>
+  </div>
+</div>

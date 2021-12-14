@@ -1,0 +1,11 @@
+.calc-history {
+  margin: 5% 30% 10% 30%;
+  border: 3px black solid;
+  height: 400px;
+  background-color: silver;
+  font-size: 20px;
+}
+
+.back-calc {
+    margin-left: 420px;
+}

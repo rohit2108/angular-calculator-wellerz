@@ -1,0 +1,75 @@
+.calculator {
+  margin: 5% 30% 10% 30%;
+  border: 3px black solid;
+  height: 400px;
+  background-color: silver;
+  font-size: 20px;
+}
+
+h1 {
+    text-align: center;
+  }
+
+form {
+  border: 2px black solid;
+  margin: 10px;
+  height: 80px;
+  font-size: 20px;
+}
+
+input[type="number"] {
+  width: 20%;
+  height: 5%;
+  margin: 10px 5px 10px 5px;
+}
+
+.calc-field {
+  padding-left: 40px;
+}
+
+.calc-error {
+  background-color: red;
+  text-align: center;
+  margin-right: 40px;
+  font-style: oblique;
+  font-size: 15px;
+}
+
+.calc-total {
+  margin:10px 180px 20px 150px;
+  border: 1px green solid;
+  padding-left: 10px;
+}
+
+button {
+  border: 2px red solid;
+  width: 120px;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+button:hover {
+    background-color: lightgreen;
+}
+
+.button-operation {
+  border: 2px thick solid;
+  position: absolute;
+  float: right;
+  margin-right: 700px;
+
+}
+
+.button-special {
+    float: right;
+    position: inherit;
+}
+
+.calc-history{
+  margin-left: 80% ;
+  margin-top: 25%;
+}
+
+

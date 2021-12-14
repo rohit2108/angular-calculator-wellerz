@@ -1,0 +1,52 @@
+<div class="calculator">
+  <h1>Calculator</h1>
+
+  <!-- form group and form control -->
+  <form [formGroup]="calculatorForm">
+    <div class="calc-field">
+      <label for="">First value:</label>
+      <input type="number" formControlName="firstValue" number />
+      <label for="">Second Value:</label>
+      <input type="number" formControlName="secondValue" />
+      <div
+        class="calc-error"
+        *ngIf="calc.firstValue.touched && calc.firstValue.errors?.required"
+      >
+        {{ "First value is required." }}
+      </div>
+      <div
+        class="calc-error"
+        *ngIf="calc.secondValue.touched && calc.secondValue.errors?.required"
+      >
+        {{ "Second value is required." }}
+      </div>
+    </div>
+  </form>
+
+  <!-- Display total value -->
+  <div class="calc-total">
+    <label for="">Total:</label>
+    {{ totalValue }}
+  </div>
+
+  <!-- display buttons for operators-->
+  <div class="button-operation">
+    <button type="button" (click)="getOperator($event)" value="+">+</button>
+    <button type="button" (click)="getOperator($event)" value="-">-</button>
+    <button type="button" (click)="getOperator($event)" value="*">*</button>
+    <button type="button" (click)="getOperator($event)" value="/">/</button>
+  </div>
+
+  <!-- display buttons for total -->
+  <div class="button-special">
+    <button type="button" (click)="calculateTotalValue()" value="=">
+      =
+    </button>
+    <button type="button" (click)="onReset($event)" value="C">C</button>
+  </div>
+  <div class="calc-history">
+    <a routerLink="/history">History</a>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
