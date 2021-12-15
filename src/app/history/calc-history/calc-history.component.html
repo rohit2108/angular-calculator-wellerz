@@ -1,9 +1,9 @@
 <div class="calc-history">
   <div *ngIf="calculatorHistory?.length; else noData">
     <div *ngFor="let history of calculatorHistory">
-      <ol>
+      <ul>
         <li>{{ history }}</li>
-      </ol>
+      </ul>
     </div>
   </div>
   <ng-template #noData>
